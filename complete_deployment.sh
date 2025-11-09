@@ -59,9 +59,9 @@ echo -e "${YELLOW}🚀 Step 2: Scanning images with Trivy...${NC}"
 echo -e "${GREEN}✅ Docker images built and pushed successfully!${NC}"
 echo ""
 
-# Step 2: Deploy to Kubernetes
-echo -e "${YELLOW}🚀 Step 3: Deploying to Kubernetes...${NC}"
-"${ROOT_DIR}/scripts/4-deploy-kube-cluster.sh" ${TAG} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}
+# Step 2: Deploy to EKS Cluster
+echo -e "${YELLOW}🚀 Step 3: Deploying to EKS...${NC}"
+"${ROOT_DIR}/scripts/4-deploy-eks-cluster.sh" ${TAG} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}❌ Kubernetes deployment failed. Please check the errors above.${NC}"
