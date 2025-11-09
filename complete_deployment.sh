@@ -47,9 +47,9 @@ echo -e "${YELLOW}🚀 Step 2: Scanning images with Trivy...${NC}"
 #     exit 1
 # fi
 
-# Step 3: Push to ECR
-# echo -e "${YELLOW}🚀 Step 3: Pushing to ECR...${NC}"
-# sh ./scripts/3-ecr-push-all-images.sh ${AWS_REGION} ${IMAGE_TAG} ${ECR_REGISTRY} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}
+Step 3: Push to ECR
+echo -e "${YELLOW}🚀 Step 3: Pushing to ECR...${NC}"
+sh ./scripts/3-ecr-push-all-images.sh ${AWS_REGION} ${IMAGE_TAG} ${ECR_REGISTRY} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}
 
 # if [ $? -ne 0 ]; then
 #     echo -e "${RED}❌ ECR push failed. Please check the errors above.${NC}"
