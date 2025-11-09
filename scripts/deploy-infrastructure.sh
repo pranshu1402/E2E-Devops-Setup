@@ -81,7 +81,7 @@ echo "  - VPC with public/private subnets"
 echo "  - ECR repositories for 4 services"
 echo "  - EKS cluster with cost-optimized node groups"
 echo ""
-echo "Note: IAM IRSA will be deployed in the next stage after EKS is ready"
+# echo "Note: IAM IRSA will be deployed in the next stage after EKS is ready"
 
 read -p "Continue with Stage 1 deployment? (y/N): " -n 1 -r
 echo

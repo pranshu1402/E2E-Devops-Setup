@@ -29,6 +29,18 @@ if [ -z "$ECR_REGISTRY" || -z "$DOCKER_REPO_NAME" ]; then
     exit 1
 fi
 
+echo ""
+echo "⚙️  Configuring kubectl for EKS cluster"
+echo "==============================="
+
+echo -e "${YELLOW}Updating kubeconfig for EKS cluster...${NC}"
+aws eks update-kubeconfig --region us-west-2 --name app-dev
+
+echo -e "${YELLOW}Testing cluster connectivity...${NC}"
+kubectl get nodes
+
+echo -e "${GREEN}✅ kubectl configured successfully ✓${NC}"
+
 # Check if kubectl is configured for EKS
 if ! kubectl cluster-info &> /dev/null; then
     echo -e "${RED}❌ kubectl is not configured for EKS cluster. Please run 'aws eks update-kubeconfig' first.${NC}"

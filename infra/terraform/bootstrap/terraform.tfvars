@@ -1,6 +1,6 @@
 aws_region = "us-west-2"
 
-aws_profile = ""
+aws_profile = "herovired"
 
 tfstate_bucket = "g5-e2e-devops-bucket"
 

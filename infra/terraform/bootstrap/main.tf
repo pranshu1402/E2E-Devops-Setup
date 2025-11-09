@@ -1,14 +1,12 @@
 # Resource for the S3 bucket itself
 resource "aws_s3_bucket" "tfstate" {
   bucket = var.tfstate_bucket
-
-  # The 'versioning' and 'server_side_encryption_configuration' blocks are correct and up-to-date.
+  
   lifecycle {
     prevent_destroy = true
   }
 }
 
-# New resource to enable versioning on the bucket
 resource "aws_s3_bucket_versioning" "tfstate_versioning" {
   bucket = aws_s3_bucket.tfstate.id
   versioning_configuration {

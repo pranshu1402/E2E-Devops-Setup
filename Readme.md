@@ -7,8 +7,12 @@ project sets up an end-to-end pipeline that covers infrastructure provisioning (
 configuration management (Ansible), containerization (Docker), CI/CD orchestration (Jenkins),
 secure image scanning (Trivy), application deployment on AWS EKS, and automated cluster health
 monitoring & self-healing using Prometheus and custom scripts.
-
+Detailed Description: [End-to-End DevOps Pipeline Project](./project_guides/End_to_End_DevOps_Pipeline_Project.pdf)
 ---------------------------
+
+# Architecture:
+---------------------------
+Diagram: [Architecture Diagram](./project_guides/architecture_diagram/Architecture%20Diagram.png)
 
 ## Project Goals
 1. Design and implement an automated CI/CD pipeline on AWS.
@@ -32,3 +36,16 @@ monitoring & self-healing using Prometheus and custom scripts.
 - Other AWS Services: CDN, EC2, ECS + Fargate
 - Database: MONGO DB (Atlas Cloud)
 ---------------------------
+
+## Setup Scripts & Guides
+- Project Structure: [Project Structure](./project_guides/PROJECT_STRUCTURE.md)
+- Architecture: [Architecture Assets](./project_guides/architecture_diagram)
+- Environment Config Management: [Configuration Management](./project_guides/CONFIGURATION.md)
+- Infra: 
+    Prerequisites: AWS CLI + Terraform Setup
+    Setup Script Via Terraform: [`deploy-infrastructure.sh`](./scripts/deploy-infrastructure.sh)
+    Guide: [Terraform Deployment Guide](./project_guides/TERRAFORM_DEPLOYMENT.md)
+- Deployment:
+    Prerequisites: Setup Jenkins
+    Guide: [Deployment Setup Guide](./project_guides/SETUP_GUIDE.md)
+    Setup Script: [`complete_deployment.sh`](./complete_deployment.sh)
